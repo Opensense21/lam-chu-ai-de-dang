@@ -1,0 +1,415 @@
+/* Component Styles: AccessibilityBar, TabNav, Cards, Paste Guide, GlossaryModal */
+
+/* Header */
+.site-header {
+  background-color: var(--color-surface);
+  border-bottom: var(--border-width) solid var(--color-border);
+  padding-block: var(--space-4) var(--space-5);
+}
+
+.site-header__brand {
+  margin-top: var(--space-4);
+}
+
+.site-header__subtitle {
+  margin-bottom: 0;
+  color: var(--color-muted);
+  font-size: 1rem;
+}
+
+/* Accessibility Bar (SH-02) */
+.a11y-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-5);
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-subtle);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.a11y-bar__group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.a11y-bar__label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  margin-right: var(--space-1);
+}
+
+.a11y-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.a11y-btn:hover {
+  background-color: var(--color-accent-soft);
+  border-color: var(--color-accent);
+}
+
+.a11y-btn[aria-pressed="true"] {
+  background-color: var(--color-accent);
+  color: var(--color-accent-text);
+  border-color: var(--color-accent);
+}
+
+/* Top-Level Tab Navigation (SH-01) */
+.tab-nav-container {
+  background-color: var(--color-surface);
+  border-bottom: var(--border-width) solid var(--color-border);
+  padding-block: var(--space-3);
+}
+
+.tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.tab-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 12rem;
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-subtle);
+  color: var(--color-text);
+  border: var(--border-width-strong) solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.tab-btn:hover {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent-soft);
+}
+
+.tab-btn[aria-selected="true"] {
+  background-color: var(--color-accent);
+  color: var(--color-accent-text);
+  border-color: var(--color-accent);
+}
+
+/* Main Content */
+.site-main {
+  padding-block: var(--space-6);
+}
+
+.site-main:focus {
+  outline: none;
+}
+
+.tab-panel {
+  display: block;
+}
+
+.stack > * + * {
+  margin-top: var(--space-5);
+}
+
+/* Cards: Max 1 nesting level (never nest .card inside .card) */
+.card {
+  background-color: var(--color-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-card);
+}
+
+.card__title {
+  margin-bottom: var(--space-3);
+}
+
+.card__intro {
+  color: var(--color-muted);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  border: var(--border-width) solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn:hover {
+  background-color: var(--color-subtle);
+  border-color: var(--color-accent);
+}
+
+.btn--primary {
+  background-color: var(--color-accent);
+  color: var(--color-accent-text);
+  border-color: var(--color-accent);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+.btn--secondary {
+  background-color: var(--color-subtle);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+/* Sample Prompt Box */
+.prompt-sample {
+  background-color: var(--color-subtle);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  margin-block: var(--space-4);
+}
+
+.prompt-sample__text {
+  margin-bottom: var(--space-3);
+  white-space: pre-wrap;
+}
+
+.prompt-sample__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.copy-feedback {
+  font-weight: 600;
+  color: var(--color-success-text);
+}
+
+/* Inline Glossary Trigger / Chip */
+.glossary-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-accent-soft);
+  color: var(--color-accent);
+  border: var(--border-width) solid var(--color-accent);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 0.2em;
+}
+
+.glossary-chip:hover {
+  background-color: var(--color-accent);
+  color: var(--color-accent-text);
+}
+
+.glossary-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+/* 3-Step Paste Guide (SH-04) */
+.paste-guide {
+  margin-top: var(--space-6);
+}
+
+.paste-guide__steps {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .paste-guide__steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.paste-guide__step {
+  background-color: var(--color-subtle);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+
+.paste-guide__step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  background-color: var(--color-accent);
+  color: var(--color-accent-text);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.paste-guide__step-title {
+  font-size: 1rem;
+  margin-bottom: var(--space-1);
+}
+
+.paste-guide__step-desc {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+/* Footer */
+.site-footer {
+  border-top: var(--border-width) solid var(--color-border);
+  background-color: var(--color-surface);
+  padding-block: var(--space-5);
+  margin-top: var(--space-6);
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.site-footer__note {
+  margin-bottom: 0;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+/* Glossary Modal (SH-06) */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  background-color: rgba(28, 25, 23, 0.6);
+}
+
+.modal-dialog {
+  width: 100%;
+  max-width: 38rem;
+  max-height: 88vh;
+  overflow-y: auto;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border: var(--border-width-strong) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-modal);
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.modal-title {
+  margin-bottom: 0;
+}
+
+.modal-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-subtle);
+  color: var(--color-text);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  background-color: var(--color-accent);
+  color: var(--color-accent-text);
+  border-color: var(--color-accent);
+}
+
+.glossary-list {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.glossary-item {
+  padding: var(--space-4);
+  background-color: var(--color-subtle);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.glossary-item--active {
+  border-color: var(--color-accent);
+  border-width: var(--border-width-strong);
+  background-color: var(--color-accent-soft);
+}
+
+.glossary-item__term {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-1);
+}
+
+.glossary-item__meaning {
+  margin-bottom: var(--space-2);
+}
+
+.glossary-item__analogy,
+.glossary-item__example {
+  margin-bottom: var(--space-1);
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+.glossary-item__example:last-child {
+  margin-bottom: 0;
+}

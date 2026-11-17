@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi" data-font-size="medium" data-contrast="warm">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Làm Chủ AI Dễ Dàng — Hướng dẫn sử dụng AI cho mọi người</title>
+    <meta
+      name="description"
+      content="Hướng dẫn sử dụng AI từ cơ bản đến nâng cao bằng tiếng Việt dễ hiểu, chữ lớn, dễ thao tác cho người lớn tuổi và người mới bắt đầu."
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F5C4D'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='30' font-weight='700' fill='%23FAF8F5'%3EAI%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="/src/styles/tokens.css" />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/components.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Chuyển đến nội dung chính</a>
+
+    <header class="site-header">
+      <div class="container">
+        <div id="accessibility-bar"></div>
+        <div class="site-header__brand">
+          <h1>Làm Chủ AI Dễ Dàng</h1>
+          <p class="site-header__subtitle">
+            Cẩm nang tiếng Việt dễ đọc, giúp bạn dùng AI đúng ý ngay từ lần đầu — không cần đăng nhập hay kiến thức kỹ thuật.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <nav class="tab-nav-container" aria-label="Cấp độ hướng dẫn">
+      <div class="container">
+        <div id="tab-nav" class="tab-list" role="tablist" aria-label="Chọn cấp độ">
+          <button
+            type="button"
+            id="tab-basic"
+            class="tab-btn"
+            role="tab"
+            data-tab="basic"
+            aria-selected="true"
+            aria-controls="panel-basic"
+            tabindex="0"
+          >
+            Cơ bản
+          </button>
+          <button
+            type="button"
+            id="tab-advanced"
+            class="tab-btn"
+            role="tab"
+            data-tab="advanced"
+            aria-selected="false"
+            aria-controls="panel-advanced"
+            tabindex="-1"
+          >
+            Nâng cao
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main id="main-content" class="site-main" tabindex="-1">
+      <div class="container">
+        <div id="goal-search-mount"></div>
+
+        <section
+          id="panel-basic"
+          class="tab-panel"
+          role="tabpanel"
+          aria-labelledby="tab-basic"
+          tabindex="0"
+        >
+          <div id="basic-tab-content" class="stack">
+            <article class="card">
+              <h2 class="card__title">Bắt đầu nhẹ nhàng với AI</h2>
+              <p>
+                Tại mục <strong>Cơ bản</strong>, bạn sẽ làm quen cách đặt câu hỏi rõ ràng để AI trả lời sát mong muốn ngay từ lần đầu, không phải hỏi đi hỏi lại nhiều lần.
+              </p>
+              <div class="prompt-sample">
+                <p class="prompt-sample__text" id="m1-sample-prompt-text">Hãy đóng vai người hướng dẫn tận tình, giải thích giúp tôi cách dùng AI để tóm tắt một bài báo dài thành 5 gạch đầu dòng ngắn gọn, dùng ngôn ngữ đời thường dễ hiểu cho người lớn tuổi.</p>
+                <div class="prompt-sample__actions">
+                  <button
+                    type="button"
+                    id="m1-sample-copy-btn"
+                    class="btn btn--primary"
+                  >
+                    Sao chép câu lệnh mẫu
+                  </button>
+                  <span id="m1-copy-feedback" class="copy-feedback" aria-hidden="true"></span>
+                </div>
+              </div>
+              <p style="margin-bottom: 0;">
+                <strong>Thuật ngữ hay gặp ở phần Cơ bản</strong> (bấm vào để xem giải thích dễ hiểu):
+              </p>
+              <div class="glossary-chip-list">
+                <button type="button" class="glossary-chip" data-glossary-term="ai">AI là gì?</button>
+                <button type="button" class="glossary-chip" data-glossary-term="prompt">Prompt (Câu lệnh)</button>
+                <button type="button" class="glossary-chip" data-glossary-term="context">Context (Bối cảnh)</button>
+                <button type="button" class="glossary-chip" data-glossary-term="hallucination">Hallucination (AI đoán nhầm)</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section
+          id="panel-advanced"
+          class="tab-panel"
+          role="tabpanel"
+          aria-labelledby="tab-advanced"
+          tabindex="0"
+          hidden
+        >
+          <div id="advanced-tab-content" class="stack">
+            <article class="card">
+              <h2 class="card__title">Làm việc thông minh hơn ở mức Nâng cao</h2>
+              <p>
+                Khi đã quen đặt câu hỏi cơ bản, mục <strong>Nâng cao</strong> giúp bạn hiểu cách giao việc nhiều bước cho trợ lý AI tự động, dạy quy trình mẫu và kết nối công cụ an toàn bằng ví dụ đời thường.
+              </p>
+              <p style="margin-bottom: 0;">
+                <strong>Thuật ngữ ở phần Nâng cao</strong> (bấm vào để xem ví von dễ nhớ):
+              </p>
+              <div class="glossary-chip-list">
+                <button type="button" class="glossary-chip" data-glossary-term="agent">Agent</button>
+                <button type="button" class="glossary-chip" data-glossary-term="skill">Skill</button>
+                <button type="button" class="glossary-chip" data-glossary-term="mcp">MCP</button>
+                <button type="button" class="glossary-chip" data-glossary-term="plugin">Plugin</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="paste-guide-section" aria-labelledby="paste-guide-title"></section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <button type="button" id="open-glossary-btn" class="btn btn--secondary">
+          Từ điển thuật ngữ AI
+        </button>
+        <p class="site-footer__note">
+          Hoạt động 100% độc lập trên trình duyệt — không cần tài khoản hay API key.
+        </p>
+      </div>
+    </footer>
+
+    <div id="glossary-modal-root"></div>
+    <div id="live-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

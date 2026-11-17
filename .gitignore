@@ -1,0 +1,11 @@
+# Ignore home directory dotfiles & system directories
+.*
+!.gitignore
+
+# Dependencies & build outputs
+node_modules/
+dist/
+test-results/
+playwright-report/
+blob-report/
+*.log

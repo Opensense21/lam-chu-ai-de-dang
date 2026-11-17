@@ -1,0 +1,85 @@
+/* Design Tokens: Warm Paper Daylight (default) & High-Contrast Mode */
+
+:root,
+[data-font-size="medium"] {
+  --font-size-base: 18px;
+}
+
+[data-font-size="large"] {
+  --font-size-base: 21px;
+}
+
+[data-font-size="xlarge"] {
+  --font-size-base: 24px;
+}
+
+:root,
+[data-contrast="warm"] {
+  --color-bg: #FAF8F5;
+  --color-surface: #FFFFFF;
+  --color-subtle: #F3EFE8;
+  --color-text: #1C1917;
+  --color-muted: #57534E;
+  --color-accent: #0F5C4D;
+  --color-accent-hover: #0B473B;
+  --color-accent-text: #FFFFFF;
+  --color-accent-soft: #E6F2EF;
+  --color-border: #E7E2DA;
+  --color-focus: #0F5C4D;
+  --color-warning-bg: #FEF3C7;
+  --color-warning-text: #78350F;
+  --color-warning-border: #B45309;
+  --color-success-bg: #E6F2EF;
+  --color-success-text: #0F5C4D;
+
+  --border-width: 1px;
+  --border-width-strong: 2px;
+  --shadow-card: 0 2px 8px rgba(28, 25, 23, 0.06);
+  --shadow-modal: 0 12px 32px rgba(28, 25, 23, 0.18);
+}
+
+[data-contrast="high"] {
+  --color-bg: #FFFFFF;
+  --color-surface: #FFFFFF;
+  --color-subtle: #F2F2F2;
+  --color-text: #000000;
+  --color-muted: #1A1A1A;
+  --color-accent: #003D82;
+  --color-accent-hover: #00295A;
+  --color-accent-text: #FFFFFF;
+  --color-accent-soft: #E6EEF8;
+  --color-border: #000000;
+  --color-focus: #003D82;
+  --color-warning-bg: #FFF7D6;
+  --color-warning-text: #000000;
+  --color-warning-border: #000000;
+  --color-success-bg: #E6EEF8;
+  --color-success-text: #003D82;
+
+  --border-width: 2px;
+  --border-width-strong: 3px;
+  --shadow-card: none;
+  --shadow-modal: none;
+}
+
+:root {
+  --font-family-sans: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace;
+  --line-height-base: 1.7;
+  --line-height-heading: 1.35;
+
+  --touch-target-min: 48px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 2.5rem;
+
+  --container-max: 52rem;
+}
